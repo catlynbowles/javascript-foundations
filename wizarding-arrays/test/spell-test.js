@@ -1,23 +1,26 @@
-const assert = require('chai').assert;
-const Spell = require('../lib/spell');
+const assert = require("chai").assert;
+const Spell = require("../lib/spell");
 
-describe('Wizard spells', () => {
-  it.skip('should have a name and a description', () => {
-    const spell = new Spell('wingardium leviosa', 'makes things levitate');
+describe("Wizard spells", () => {
+  it("should have a name and a description", () => {
+    const spell = new Spell("wingardium leviosa", "makes things levitate");
 
-    assert.equal(spell.name, 'wingardium leviosa');
-    assert.equal(spell.description, 'makes things levitate');
+    assert.equal(spell.name, "wingardium leviosa");
+    assert.equal(spell.description, "makes things levitate");
   });
 
-  it.skip('can be executed', () => {
-    const spell = new Spell('wingardium leviosa', 'makes things levitate');
+  it("can be executed", () => {
+    const spell = new Spell("wingardium leviosa", "makes things levitate");
     const target = "book";
 
-    assert.equal(spell.execute(target), "Success! You've cast a spell on the book.");
+    assert.equal(
+      spell.execute(target),
+      "Success! You've cast a spell on the book."
+    );
   });
 
-  it.skip('can execute against multiple targets', () => {
-    const spell = new Spell('wingardium leviosa', 'makes things levitate');
+  it("can execute against multiple targets", () => {
+    const spell = new Spell("wingardium leviosa", "makes things levitate");
 
     const target1 = "book";
     const target2 = "table";
@@ -25,11 +28,14 @@ describe('Wizard spells', () => {
 
     const targets = [target1, target2, target3];
 
-    assert.equal(spell.execute(targets), "Success! You've cast a spell on the book. Success! You've cast a spell on the table. Success! You've cast a spell on the bowl.");
+    assert.equal(
+      spell.execute(targets),
+      "Success! You've cast a spell on the book. Success! You've cast a spell on the table. Success! You've cast a spell on the bowl."
+    );
   });
 
-  it.skip('saves all its targets in execution history', () => {
-    const spell = new Spell('wingardium leviosa', 'makes things levitate');
+  it("saves all its targets in execution history", () => {
+    const spell = new Spell("wingardium leviosa", "makes things levitate");
 
     const target1 = "book";
     const target2 = "table";
@@ -48,8 +54,8 @@ describe('Wizard spells', () => {
     assert.equal(spell.executionHistory[2], target3);
   });
 
-  it.skip('can clear its execution history', () => {
-    const spell = new Spell('wingardium leviosa', 'makes things levitate');
+  it("can clear its execution history", () => {
+    const spell = new Spell("wingardium leviosa", "makes things levitate");
 
     const target1 = "book";
     const target2 = "table";
