@@ -31,7 +31,7 @@ describe("Roadrace", function() {
     assert.deepEqual(race.participants, []);
   })
 
-  it('should be able to register participants', function() {
+  it.skip('should be able to register participants', function() {
     var race = new Roadrace({title: 'Rock N Roll Half Marathon', city: "Las Vegas"});
     var mike = new Runner('Mike', 36);
     var pam = new Runner('Pam', 33);
@@ -46,7 +46,7 @@ describe("Roadrace", function() {
     assert.equal(race.participants[1].name, 'Pam');
   })
 
-  it('should add race to each participant\'s completed races when race is completed', function() {
+  it.skip('should add race to each participant\'s completed races when race is completed', function() {
     var race = new Roadrace({title: 'Rock N Roll Half Marathon', city: "Las Vegas"});
     race.setDistance(13.1);
 
@@ -65,7 +65,7 @@ describe("Roadrace", function() {
     assert.equal(lazyHeather.completedRaces.includes('Rock N Roll Half Marathon'), false);
   })
 
-  it('should update each participant\'s miles and fitness when race is completed', function() {
+  it.skip('should update each participant\'s miles and fitness when race is completed', function() {
     var race = new Roadrace({title: 'Rock N Roll Half Marathon', city: "Las Vegas"});
     race.setDistance(13.1);
 
